@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactoRouteImport } from './routes/contacto'
 import { Route as NosotrosRouteImport } from './routes/nosotros'
+import { Route as OdsRouteImport } from './routes/ods'
 import { Route as OrigenRouteImport } from './routes/origen'
 import { Route as PreguntasRouteImport } from './routes/preguntas'
 import { Route as PrivacidadRouteImport } from './routes/privacidad'
@@ -31,6 +32,11 @@ const ContactoRoute = ContactoRouteImport.update({
 const NosotrosRoute = NosotrosRouteImport.update({
   id: '/nosotros',
   path: '/nosotros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OdsRoute = OdsRouteImport.update({
+  id: '/ods',
+  path: '/ods',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OrigenRoute = OrigenRouteImport.update({
@@ -63,6 +69,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
   '/nosotros': typeof NosotrosRoute
+  '/ods': typeof OdsRoute
   '/origen': typeof OrigenRoute
   '/preguntas': typeof PreguntasRoute
   '/privacidad': typeof PrivacidadRoute
@@ -73,6 +80,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
   '/nosotros': typeof NosotrosRoute
+  '/ods': typeof OdsRoute
   '/origen': typeof OrigenRoute
   '/preguntas': typeof PreguntasRoute
   '/privacidad': typeof PrivacidadRoute
@@ -84,6 +92,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/contacto': typeof ContactoRoute
   '/nosotros': typeof NosotrosRoute
+  '/ods': typeof OdsRoute
   '/origen': typeof OrigenRoute
   '/preguntas': typeof PreguntasRoute
   '/privacidad': typeof PrivacidadRoute
@@ -96,6 +105,7 @@ export interface FileRouteTypes {
     | '/'
     | '/contacto'
     | '/nosotros'
+    | '/ods'
     | '/origen'
     | '/preguntas'
     | '/privacidad'
@@ -106,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/contacto'
     | '/nosotros'
+    | '/ods'
     | '/origen'
     | '/preguntas'
     | '/privacidad'
@@ -116,6 +127,7 @@ export interface FileRouteTypes {
     | '/'
     | '/contacto'
     | '/nosotros'
+    | '/ods'
     | '/origen'
     | '/preguntas'
     | '/privacidad'
@@ -127,6 +139,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactoRoute: typeof ContactoRoute
   NosotrosRoute: typeof NosotrosRoute
+  OdsRoute: typeof OdsRoute
   OrigenRoute: typeof OrigenRoute
   PreguntasRoute: typeof PreguntasRoute
   PrivacidadRoute: typeof PrivacidadRoute
@@ -155,6 +168,13 @@ declare module '@tanstack/react-router' {
       path: '/nosotros'
       fullPath: '/nosotros'
       preLoaderRoute: typeof NosotrosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ods': {
+      id: '/ods'
+      path: '/ods'
+      fullPath: '/ods'
+      preLoaderRoute: typeof OdsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/origen': {
@@ -199,6 +219,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactoRoute: ContactoRoute,
   NosotrosRoute: NosotrosRoute,
+  OdsRoute: OdsRoute,
   OrigenRoute: OrigenRoute,
   PreguntasRoute: PreguntasRoute,
   PrivacidadRoute: PrivacidadRoute,
