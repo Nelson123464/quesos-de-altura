@@ -10,7 +10,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
-import { SiteHeader, SiteFooter } from "@/components/quesos/experience";
+import { SiteHeader, SiteFooter, WelcomeNotice } from "@/components/quesos/experience";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -128,6 +128,7 @@ function RootComponent() {
       <SiteHeader />
       <main><Outlet /></main>
       <SiteFooter />
+      <WelcomeNotice />
     </QueryClientProvider>
   );
 }
