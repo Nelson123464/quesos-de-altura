@@ -1,6 +1,6 @@
 # Subir el proyecto a tu repositorio de GitHub
 
-Subiré la web de Quesos de Altura S.A.C. a `Nelson123464/informatica_empresarial` usando la conexión de GitHub que ya tienes en el workspace ("Nelson's GitHub API"). El repositorio está vacío, así que el código quedará ahí con un solo提交 limpio.
+Subiré la web de Quesos de Altura S.A.C. a `Nelson123464/informatica_empresarial` usando la conexión de GitHub que ya tienes en el workspace ("Nelson's GitHub API"). El repositorio está vacío, así que el código quedará ahí con un solo commit limpio.
 
 ## Qué haré
 
