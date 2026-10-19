@@ -5,5 +5,5 @@
 - [x] Verify customer flow and mobile layout.
 - [x] Publish at the Lovable address quesos-de-altura.lovable.app.
 - [x] Upload the project with its photos to the GitHub repository Nelson123464/informatica_empresarial.
-- [ ] Align company information and the downloadable document with the latest supplied Markdown, preserving design and educational notice.
-- [ ] Verify updated facts and the customer-facing pages.
+- [x] Align company information and the downloadable document with the latest supplied Markdown, preserving design and educational notice.
+- [x] Verify updated facts and the customer-facing pages.
