@@ -7,8 +7,11 @@ describe('Company commercial references', () => {
   it('uses the provided direct blue cheese price of S/ 85 per kilogram', () => {
     expect(cheeses.find(c => c.id === 'azul')?.price).toBe(85);
   });
-  it('does not invent a direct price for Paria Gourmet', () => {
-    expect(cheeses.find(c => c.id === 'gourmet')?.price).toBeNull();
+  it('uses the latest direct Gourmet price of S/ 67.50 per kilogram', () => {
+    expect(cheeses.find(c => c.id === 'gourmet')?.price).toBe(67.5);
+  });
+  it('uses the latest Gourmet maturation of one to two months', () => {
+    expect(cheeses.find(c => c.id === 'gourmet')?.maturation).toBe('1 a 2 meses');
   });
   it('keeps Paria maturation at four to eight months', () => {
     expect(cheeses.find(c => c.id === 'paria')?.maturation).toBe('4 a 8 meses');
