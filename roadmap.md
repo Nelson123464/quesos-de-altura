@@ -6,4 +6,4 @@
 - [x] Publish at the Lovable address quesos-de-altura.lovable.app.
 - [x] Upload the project with its photos to the GitHub repository Nelson123464/informatica_empresarial.
 - [x] Align company information and the downloadable document with the latest supplied Markdown, preserving design and educational notice.
-- [x] Verify updated facts and the customer-facing pages.
+- [x] Verify updated facts and the customer-facing pages.- [x] Add the three certificates to the company page with PDF download.
